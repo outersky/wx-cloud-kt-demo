@@ -3,13 +3,10 @@ package cn.hillwind.wx.newartist.util
 import org.springframework.context.ApplicationContext
 import org.springframework.web.context.request.RequestContextHolder
 import org.springframework.web.context.request.ServletRequestAttributes
-import java.io.File
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
 object Global {
-
-    lateinit var uploadRootDir: File
 
     lateinit var ctx: String
 

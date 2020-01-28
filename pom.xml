@@ -112,30 +112,6 @@
         </dependency>
 
         <dependency>
-            <groupId>cn.hillwind.common</groupId>
-            <artifactId>common-util</artifactId>
-            <version>${common.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.jetbrains.kotlin</groupId>
-                    <artifactId>kotlin-stdlib</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>cn.hillwind.common</groupId>
-            <artifactId>common-web</artifactId>
-            <version>${common.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.jetbrains.kotlin</groupId>
-                    <artifactId>kotlin-stdlib</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
@@ -179,18 +155,6 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!--二维码-->
-        <dependency>
-            <groupId>com.google.zxing</groupId>
-            <artifactId>core</artifactId>
-            <version>3.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.zxing</groupId>
-            <artifactId>javase</artifactId>
-            <version>3.4.0</version>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -199,7 +163,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>cn.hillwind.wx.newartist.SpringApplication</mainClass>
+                    <mainClass>cn.hillwind.wx.demo.SpringApplication</mainClass>
                     <!-- 关闭fork。否则使用spring-boot:run启动时，在idea中无法调试程序，在eclipse中无法关闭web服务 -->
                     <!-- 但是关闭fork时，也就禁用了热加载，修改模板文件也需要重启服务！ -->
                     <!--                    <fork>false</fork>-->
@@ -276,91 +240,5 @@
 
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>default</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-                <defaultGoal>clean package</defaultGoal>
-            </build>
-        </profile>
-
-        <profile>
-            <id>design</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                <resources>
-                    <resource>
-                        <directory>src/design/resources</directory>
-                    </resource>
-                </resources>
-                <plugins>
-                    <plugin>
-                        <groupId>org.jetbrains.kotlin</groupId>
-                        <artifactId>kotlin-maven-plugin</artifactId>
-                        <version>${kotlin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>compile</id>
-                                <phase>compile</phase>
-                                <goals>
-                                    <goal>compile</goal>
-                                </goals>
-                                <configuration>
-                                    <sourceDirs>
-                                        <source>src/design/kotlin</source>
-                                        <source>target/generated-sources/kotlin</source>
-                                        <source>target/generated-sources/annotations</source>
-                                    </sourceDirs>
-                                </configuration>
-                            </execution>
-                            <execution>
-                                <id>test-compile</id>
-                                <phase>test-compile</phase>
-                                <goals>
-                                    <goal>test-compile</goal>
-                                </goals>
-                                <configuration>
-                                    <sourceDirs>
-                                        <sourceDir>src/test/kotlin</sourceDir>
-                                    </sourceDirs>
-                                </configuration>
-                            </execution>
-                        </executions>
-
-                        <configuration>
-                            <jvmTarget>1.8</jvmTarget>
-                            <args>
-                                <arg>-Xjsr305=strict</arg>
-                            </args>
-                            <compilerPlugins>
-                                <plugin>spring</plugin>
-                            </compilerPlugins>
-                        </configuration>
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.jetbrains.kotlin</groupId>
-                                <artifactId>kotlin-maven-allopen</artifactId>
-                                <version>${kotlin.version}</version>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.jetbrains.kotlin</groupId>
-                                <artifactId>kotlin-maven-noarg</artifactId>
-                                <version>${kotlin.version}</version>
-                            </dependency>
-                        </dependencies>
-
-                    </plugin>
-
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
-
 
 </project>

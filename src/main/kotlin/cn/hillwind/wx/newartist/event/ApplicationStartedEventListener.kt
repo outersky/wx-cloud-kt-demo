@@ -10,13 +10,9 @@ import org.springframework.boot.context.event.ApplicationStartedEvent
 import org.springframework.context.ApplicationContext
 import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Component
-import java.io.File
 
 @Component
 class ApplicationStartedEventListener {
-
-    @Value("\${uploadRootDir}")
-    lateinit var uploadRootDir: String
 
     @Value("\${server.servlet.context-path}")
     lateinit var ctx: String
@@ -24,7 +20,6 @@ class ApplicationStartedEventListener {
     @EventListener
     fun onApplicationEvent(ev: ApplicationStartedEvent) {
         Global.applicationContext = applicationContext
-        Global.uploadRootDir = File(uploadRootDir)
         Global.ctx = ctx
 
         WxCloudContext.register(DefaultWxCloudServiceHolder())

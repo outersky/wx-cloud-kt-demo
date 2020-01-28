@@ -1,10 +1,6 @@
 package cn.hillwind.wx.newartist.wxcloud
 
-import cn.hillwind.common.util.gson.JsonHelper
-import cn.hillwind.wx.cloud.DbCondition
-import cn.hillwind.wx.cloud.DbStatement
-import cn.hillwind.wx.cloud.PageParam
-import cn.hillwind.wx.cloud.WxCloudService
+import cn.hillwind.wx.cloud.*
 import cn.hillwind.wx.newartist.domain.Bill
 import cn.hillwind.wx.newartist.domain.BillDate
 import com.github.binarywang.wxpay.service.WxPayService
@@ -93,7 +89,7 @@ class WxCloudIntegrationTest {
     fun testCloudWorks() {
         println("load BillDate list...")
         BillDate.findList().forEach {
-            println(JsonHelper.toJson(it, false))
+            println(JsonHelper.toJson(it))
         }
 
         println("load single BillDate ...")
