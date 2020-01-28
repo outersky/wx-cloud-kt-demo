@@ -1,4 +1,4 @@
-package cn.hillwind.wx.newartist
+package cn.hillwind.wx.demo
 
 import org.springframework.boot.builder.SpringApplicationBuilder
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer

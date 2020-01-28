@@ -1,4 +1,4 @@
-package cn.hillwind.wx.newartist
+package cn.hillwind.wx.demo
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

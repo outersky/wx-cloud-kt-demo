@@ -1,4 +1,4 @@
-package cn.hillwind.wx.newartist.conf
+package cn.hillwind.wx.demo.conf
 
 import cn.hillwind.wx.cloud.JsonHelper
 import me.chanjar.weixin.mp.api.WxMpMessageRouter

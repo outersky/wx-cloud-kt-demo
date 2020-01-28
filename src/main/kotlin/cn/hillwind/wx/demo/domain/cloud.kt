@@ -1,4 +1,4 @@
-package cn.hillwind.wx.newartist.domain
+package cn.hillwind.wx.demo.domain
 
 import cn.hillwind.wx.cloud.CloudBase
 import cn.hillwind.wx.cloud.CloudDb

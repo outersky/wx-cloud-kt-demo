@@ -18,22 +18,6 @@
         <java.version>1.8</java.version>
         <kotlin.version>1.3.61</kotlin.version>
         <weixin.version>3.6.0</weixin.version>
-        <common.version>1.8.1</common.version>
-
-        <!-- 数据库JDBC驱动 -->
-        <!--
-                <jdbc.driver.groupId>com.h2database</jdbc.driver.groupId>
-                <jdbc.driver.artifactId>h2</jdbc.driver.artifactId>
-                <jdbc.driver.version>1.4.197</jdbc.driver.version>
-        -->
-
-        <!-- 数据库JDBC驱动 -->
-        <jdbc.driver.groupId>mysql</jdbc.driver.groupId>
-        <jdbc.driver.artifactId>mysql-connector-java</jdbc.driver.artifactId>
-        <jdbc.driver.version>5.1.41</jdbc.driver.version>
-
-        <jsp-api.version>2.2.1</jsp-api.version>
-        <cxf.version>3.3.2</cxf.version>
     </properties>
 
     <dependencies>
@@ -106,12 +90,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.4</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
@@ -140,19 +118,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <!--			<scope>provided</scope>-->
-        </dependency>
-
-        <dependency>
-            <groupId>org.yaml</groupId>
-            <artifactId>snakeyaml</artifactId>
-            <version>1.25</version>
-        </dependency>
-
-        <dependency>
-            <groupId>${jdbc.driver.groupId}</groupId>
-            <artifactId>${jdbc.driver.artifactId}</artifactId>
-            <version>${jdbc.driver.version}</version>
-            <scope>runtime</scope>
         </dependency>
 
     </dependencies>

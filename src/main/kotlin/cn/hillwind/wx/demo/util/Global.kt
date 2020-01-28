@@ -1,4 +1,4 @@
-package cn.hillwind.wx.newartist.util
+package cn.hillwind.wx.demo.util
 
 import org.springframework.context.ApplicationContext
 import org.springframework.web.context.request.RequestContextHolder

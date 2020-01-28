@@ -1,4 +1,4 @@
-package cn.hillwind.wx.newartist.conf
+package cn.hillwind.wx.demo.conf
 
 import com.github.binarywang.wxpay.config.WxPayConfig
 import com.github.binarywang.wxpay.service.WxPayService

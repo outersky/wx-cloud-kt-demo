@@ -1,8 +1,8 @@
-package cn.hillwind.wx.newartist.wxcloud
+package cn.hillwind.wx.demo
 
 import cn.hillwind.wx.cloud.*
-import cn.hillwind.wx.newartist.domain.Bill
-import cn.hillwind.wx.newartist.domain.BillDate
+import cn.hillwind.wx.demo.domain.Bill
+import cn.hillwind.wx.demo.domain.BillDate
 import com.github.binarywang.wxpay.service.WxPayService
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
@@ -37,8 +37,8 @@ class WxCloudIntegrationTest {
     @Test
     fun downloadFile() {
         val downloadResult = cloudService.storageService().getDownloadUrls(300, arrayListOf(
-                "cloud://newartist-dev.6e65-newartist-dev-1301059729/works/20200114/150030_388.jpg",
-                "cloud://newartist-dev.6e65-newartist-dev-1301059729/works/20200114/150322_342.jpg"
+                "cloud://demo-dev.6e65-demo-dev-1301059729/works/20200114/150030_388.jpg",
+                "cloud://demo-dev.6e65-demo-dev-1301059729/works/20200114/150322_342.jpg"
         ))
         println("downloadResult.result:")
         println(downloadResult.toJson())
@@ -63,7 +63,7 @@ class WxCloudIntegrationTest {
     @Test
     fun deleteFile() {
         val deleteResult = cloudService.storageService().delete(
-                arrayListOf("cloud://newartist-dev.6e65-newartist-dev-1301059729/my-image.png")
+                arrayListOf("cloud://demo-dev.6e65-demo-dev-1301059729/my-image.png")
         )
         println("deleteResult.result:")
         println(deleteResult.toJson())

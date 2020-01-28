@@ -1,4 +1,4 @@
-package cn.hillwind.wx.newartist.util
+package cn.hillwind.wx.demo.util
 
 import java.text.SimpleDateFormat
 import java.util.*

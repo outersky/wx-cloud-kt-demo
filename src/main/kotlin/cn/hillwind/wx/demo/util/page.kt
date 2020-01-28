@@ -1,4 +1,4 @@
-package cn.hillwind.wx.newartist.util
+package cn.hillwind.wx.demo.util
 
 import cn.hillwind.wx.cloud.PageParam
 import cn.hillwind.wx.cloud.PageReq

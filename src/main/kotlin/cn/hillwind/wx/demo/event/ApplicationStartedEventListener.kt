@@ -1,9 +1,9 @@
-package cn.hillwind.wx.newartist.event
+package cn.hillwind.wx.demo.event
 
 import cn.hillwind.wx.cloud.WxCloudContext
 import cn.hillwind.wx.cloud.WxCloudService
 import cn.hillwind.wx.cloud.WxCloudServiceHolder
-import cn.hillwind.wx.newartist.util.Global
+import cn.hillwind.wx.demo.util.Global
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.context.event.ApplicationStartedEvent
