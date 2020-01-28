@@ -1,0 +1,30 @@
+wx:
+  mp:
+    configs:
+      - appId: XXX
+        secret: XXX
+        token:
+        AESkey:
+  cloud:
+    default: XXX
+    configs:
+      - env: XXX
+      - env: YYY
+  pay:
+    appId: XXX
+    mchId: XXX
+    mchKey: XXX #微信支付商户密钥
+    keyPath: XXX.p12  # p12证书的位置
+
+server:
+  port: 9090
+  servlet:
+    context-path: /demo
+
+logging:
+  level:
+    root: INFO
+    cn.hillwind.wx: DEBUG
+    com.github.binarywang: DEBUG
+
+uploadRootDir: /tmp/upload
